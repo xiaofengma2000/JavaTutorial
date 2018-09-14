@@ -1,7 +1,7 @@
 package com.kema.p2p;
 
-import com.kema.Coin.CoinBlock;
-import com.kema.Coin.CoinChain;
+import com.kema.blockcoin.CoinBlock;
+import com.kema.blockcoin.CoinChain;
 import org.junit.Test;
 
 public class TestMiner {

@@ -1,14 +1,12 @@
 package com.kema.p2p;
 
-import com.kema.Coin.CoinBlock;
-import com.kema.Coin.CoinChain;
-import com.kema.Coin.Person;
+import com.kema.blockcoin.CoinBlock;
+import com.kema.blockcoin.CoinChain;
+import com.kema.blockcoin.Person;
 import net.tomp2p.peers.Number160;
 
 import java.io.IOException;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ForkJoinPool;
 
 public class MinerApp {
 
