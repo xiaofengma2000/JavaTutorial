@@ -1,4 +1,4 @@
-package com.kema.Coin;
+package com.kema.blockcoin;
 
 import java.security.*;
 

@@ -1,6 +1,4 @@
-package com.kema.Coin;
-
-import com.kema.blockchain.Block;
+package com.kema.blockcoin;
 
 import java.io.Serializable;
 import java.util.ArrayList;
