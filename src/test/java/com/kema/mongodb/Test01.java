@@ -2,13 +2,14 @@ package com.kema.mongodb;
 
 import static org.junit.Assert.*;
 
+import com.mongodb.session.ClientSession;
 import org.bson.Document;
 import org.junit.Test;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.ClientSessionOptions;
 import com.mongodb.MongoClient;
-import com.mongodb.client.ClientSession;
+//import com.mongodb.client.ClientSession;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
@@ -37,12 +38,12 @@ public class Test01 {
 		document.put("name", "kema02");
 		document.put("company", "nokia");
 		
-		// ClientSessionOptions option = ClientSessionOptions.builder().build();
-		try (ClientSession clientSession = client.startSession()) {
-			clientSession.startTransaction();
+		 ClientSessionOptions option = ClientSessionOptions.builder().build();
+		try (ClientSession clientSession = client.startSession(option)) {
+//			clientSession.startTransaction();
 			collection.insertOne(clientSession, document);
 //			collection.insertOne(clientSession, docTwo);
-			clientSession.commitTransaction();
+//			clientSession.commitTransaction();
 		}
 	}
 
