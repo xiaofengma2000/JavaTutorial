@@ -23,7 +23,6 @@ public class Test01 {
                 .get().uri("/ping")
                 .accept(MediaType.TEXT_PLAIN)
                 .exchange()
-                // and use the dedicated DSL to test assertions against the response
                 .expectStatus().isOk()
                 .expectBody(String.class).isEqualTo("Ping");
     }
@@ -35,9 +34,10 @@ public class Test01 {
                 .get().uri("/NEDef/ne01")
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
-                // and use the dedicated DSL to test assertions against the response
                 .expectStatus().isOk()
-                .expectBody(NEDefinition.class).returnResult().getResponseBody();
+                .expectBody(NEDefinition.class)
+                .returnResult()
+                .getResponseBody();
         Assert.assertEquals("ne01", result.getName());
     }
 
